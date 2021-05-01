@@ -1,0 +1,151 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+
+.visually-hidden {
+    display: none;
+}
+
+:root {
+    --color-violet: hsl(257, 40%, 49%);
+    --color-soft-magenta: hsl(300, 69%, 71%);
+    --color-light: #f6f8f8;
+}
+
+html,
+body {
+    font-size: 18px;
+    font-family: "Open Sans", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--color-light);
+}
+
+h1 {
+    font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    font-size: 2.441rem;
+    line-height: 1.125;
+    margin-bottom: 2rem;
+}
+
+p {
+    margin-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.huddle-landing-page {
+    background-color: var(--color-violet);
+    background-image: url("/images/bg-desktop.svg");
+    background-size: cover;
+}
+
+.huddle-landing-page .landing-page-container {
+    height: 100vh;
+    width: 78.9%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.huddle-landing-page .landing-page-container .landing-page-content {
+    display: flex;
+    align-items: center;
+}
+
+.huddle-landing-page .landing-page-container .landing-page-content .page-content-illustration img {
+    width: 100%;
+}
+
+.huddle-landing-page .landing-page-container .landing-page-content .page-content-copy {
+    display: flex;
+    align-items: center;
+}
+
+.huddle-landing-page .landing-page-container .landing-page-content .page-content-copy .copy-container {
+    max-width: 75ch;
+    padding: 1rem;
+}
+
+.huddle-landing-page .landing-page-container .landing-page-footer {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.huddle-landing-page .landing-page-container .landing-page-footer .social-icons {
+    list-style-type: none;
+    display: flex;
+}
+
+.huddle-landing-page .landing-page-container .landing-page-footer .social-icons .icon:nth-child(2) {
+    padding: 0 0.5rem;
+}
+
+.huddle-landing-page .landing-page-container .landing-page-footer .social-icons a {
+    color: var(--color-light);
+    text-decoration: none;
+    border: 1px solid var(--color-light);
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4rem;
+}
+
+.huddle-landing-page .landing-page-container .landing-page-footer .social-icons a:hover {
+    color: var(--color-soft-magenta);
+    border: 1px solid var(--color-soft-magenta);
+}
+
+.button {
+    background-color: var(--color-light);
+    color: var(--color-violet);
+    padding: 0.5rem 3rem;
+    border-radius: 2rem;
+    text-decoration: none;
+    font-family: "Poppins", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+.button:hover {
+    background-color: var(--color-soft-magenta);
+    color: var(--color-light);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+
+@media screen and (max-width: 768px) {
+    .huddle-landing-page .landing-page-container .landing-page-navbar {
+        display: flex;
+        justify-content: center;
+    }
+    .huddle-landing-page .landing-page-container .landing-page-footer {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .huddle-landing-page {
+        background-image: url("/images/bg-mobile.svg");
+        background-size: cover;
+    }
+    .huddle-landing-page .landing-page-container {
+        height: auto;
+    }
+    .landing-page-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar-logo {
+        padding: 2rem 0 4rem 0;
+    }
+
+    .social-icons {
+        padding: 4rem 0 1rem 0;
+    }
+}
